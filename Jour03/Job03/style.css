@@ -1,0 +1,15 @@
+ul {
+  margin: 0;
+}
+
+div {
+  background-color: antiquewhite;
+  width: 500px;
+  height: 500px;
+}
+
+img {  
+  block-size: 150px;
+  margin: 0;
+  padding: 0;
+}

@@ -2,9 +2,9 @@
     list-style-type: none;
     margin: 0;
     float: left;
-    background: #eee;
+    background: #bbffee;
     padding: 5px;
-    width: 50%; 
+    width: 310px; 
     min-height: 50px;
     margin-bottom: 10px;
 }
@@ -12,10 +12,14 @@
 #sortable2 {
     list-style-type: none;
     margin: 0;
-    float: left;
+    float: right;
     background: #eee;
     padding: 5px;
-    width: 50%;
+    width: 25%;
+}
+
+#random {
+    float: right;
 }
 
 img {
