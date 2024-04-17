@@ -1,0 +1,25 @@
+#sortable1 {
+    list-style-type: none;
+    margin: 0;
+    float: left;
+    background: #eee;
+    padding: 5px;
+    width: 50%; 
+    min-height: 50px;
+    margin-bottom: 10px;
+}
+
+#sortable2 {
+    list-style-type: none;
+    margin: 0;
+    float: left;
+    background: #eee;
+    padding: 5px;
+    width: 50%;
+}
+
+img {
+    block-size: 150px;
+    margin: 0;
+    padding: 0;
+}
