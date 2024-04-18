@@ -25,7 +25,6 @@ $(document).ready(function(){
       if ($(this).attr('id') == "image" + (((rand[count]%8)+1)%8)){
         image2 = this
       }
-      alert($(this).attr('id'))
       count++
       if (bool == 0){
         $(image1).before($(image2));
