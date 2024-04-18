@@ -1,26 +1,17 @@
 "use strict"
 
-let show = false
-
-function showhide(){
-    show = !show
-    if (show){
-        let article = document.createElement("article")
-        let head = document.createElement("h1")
-        let newContent = document.createTextNode("L'important n'est pas la chute, mais l'atterrissage");
-
-        head.appendChild(newContent)
-        article.appendChild(head)
-
-        let button = document.getElementById("button");
-        button.innerText = "Hide"
-        document.body.insertBefore(article, button);
+function jsonValueKey(jsonObj, key){
+    for(var i in jsonObj){
+        if (i == key){
+            var j_key = i;
+            var val = jsonObj[i];
+            alert(j_key + " : " + val);
+        }
     }
-    else{
-        let article = document.querySelector('article')
-        article.remove()
+}
 
-        let button = document.getElementById("button");
-        button.innerText = "Show"
-    }
+function getString(str){
+    fetch('./data.json')
+    .then((response) => response.json())
+    .then((json) => jsonValueKey(json, str));
 }
