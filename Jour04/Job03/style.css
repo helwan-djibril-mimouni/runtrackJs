@@ -1,0 +1,47 @@
+#type1{
+    width: 100px;
+    height: 40px;
+    float: right;
+    position: relative;
+    right: 70%;
+    bottom: 60px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+#type2{
+    width: 100px;
+    height: 40px;
+    float: right;
+    position: relative;
+    right: 55%;
+    bottom: 60px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+#name_id{
+    margin-top: 10px;
+}
+
+#name_input{
+    margin-top: 10px;
+}
+
+#select{
+    display: block;
+    margin-top: 10px;
+}
+
+#button{
+    height: 25px;
+    margin-top: 10px;
+}
+
+p{
+    margin: 0;
+}

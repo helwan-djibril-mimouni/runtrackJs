@@ -5,7 +5,7 @@ function jsonValueKey(jsonObj, key){
         if (i == key){
             var j_key = i;
             var val = jsonObj[i];
-            alert(j_key + " : " + val);
+            return (j_key + " : " + val);
         }
     }
 }
@@ -13,5 +13,5 @@ function jsonValueKey(jsonObj, key){
 function getString(str){
     fetch('./data.json')
     .then((response) => response.json())
-    .then((json) => jsonValueKey(json, str));
+    .then((json) => alert(jsonValueKey(json, str)));
 }
