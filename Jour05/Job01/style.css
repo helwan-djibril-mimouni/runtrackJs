@@ -1,0 +1,17 @@
+#clicked{
+    width: 100px;
+    height: 40px;
+    bottom: 60px;
+    background-color: gray;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+#not_clicked{
+    width: 100px;
+    height: 40px;
+    bottom: 60px;
+    background-color: lightgray;
+    font-weight: bolder;
+    font-size: medium;
+}

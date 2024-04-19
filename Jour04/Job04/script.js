@@ -1,3 +1,5 @@
+// import fs from 'node:fs';
+
 "use strict"
 
 function jsonValueKey(jsonObj){
@@ -72,6 +74,22 @@ function add_user(){
     // var fs = require('fs')
     // let jsonData = JSON.parse(fs.readFileSync('data.json'))
     // alert(jsonData)
+
+    const data = fs.readFileSync('utilisateur.json');
+    const jsonData = JSON.parse(data);
+    jsonData.push({
+        "id": id_filter,
+        "first-name": fn_filter,
+        "last-name": ln_filter,
+        "mail": mail_filter
+    });
+    const jsonString = JSON.stringify(jsonData);
+    fs.writeFileSync('utilisateur.json', jsonString, 'utf-8', (err) => {
+        if (err) throw err;
+        console.log('Data added to file');
+    });
+
+    table()
 }
 
 table()
