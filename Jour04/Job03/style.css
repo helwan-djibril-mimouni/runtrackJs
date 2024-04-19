@@ -24,6 +24,15 @@
     font-size: medium;
 }
 
+button{
+    background-image: url();
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+}
+
 #name_id{
     margin-top: 10px;
 }

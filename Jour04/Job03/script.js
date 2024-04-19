@@ -174,6 +174,12 @@ async function putInHtml(id, name, types, hp, atk, def, spatk, spdef, spd){
     type1.id = "type1"
     type2.id = "type2"
 
+    //image
+    let image_url = getImageFromAPI(id)
+    let img = document.createElement("button")
+    img.style.backgroundImage="url(https://raw.githubusercontent.com/Yarkis01/TyraDex/images/sprites/" + id + "/regular.png)"
+    console.log((await image_url).image)
+
     //stats
     let hp_p = document.createElement("p")
     hp_p.innerText = "HP : " + hp
@@ -197,6 +203,7 @@ async function putInHtml(id, name, types, hp, atk, def, spatk, spdef, spd){
         document.body.appendChild(type1);
         document.body.appendChild(type2);
     }
+    document.body.appendChild(img);
     document.body.appendChild(hp_p);
     document.body.appendChild(atk_p);
     document.body.appendChild(def_p);
@@ -209,4 +216,21 @@ function sortByID(){
     fetch('./pokemon.json')
     .then((response) => response.json())
     .then(async (json) => await getPokemons(json));
+}
+
+async function getGameDetails(id) {
+    try {
+        const response = await fetch('https://tyradex.tech/api/v1/pokemon/'+id, { cache: "no-cache" });
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+
+async function getImageFromAPI(index){
+    const response = await getGameDetails(index);
+    const data = { image: response.sprites.regular };
+    return data;
 }

@@ -77,7 +77,10 @@ function checkUser(){
 
    let user_data = load(mail_value)
    let user = JSON.parse(user_data)
-   if (user.password === password_value){
+   if (!((mail_value + "").includes("@") && (mail_value + "").includes("."))){
+      alert("mail not valid")
+   }
+   else if (user.password === password_value){
       window.location.href = "successful.html";
    }
    else{
